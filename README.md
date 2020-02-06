@@ -1,6 +1,6 @@
 # ansible-repo
 
-This is a collection of Ansible repos that I have been using that I have anonymized.
+This is a collection of Ansible playbooks that I have been using that I have anonymized.
 
 # Repository Contents
 * __apt-update.yml__ ------ Installs apt, applies updates and upgrades and cleans everything up
