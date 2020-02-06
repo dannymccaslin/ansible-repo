@@ -1,0 +1,24 @@
+--- # Updates and Upgrades Servers, then cleans and removes from Apt
+
+- hosts: hostGroup #Put your host group name here from your /etc/ansible/hosts file
+  become: yes
+
+  tasks:
+  - name: Install Aptitude
+    apt:
+      name: aptitude
+      state: latest
+
+  - name: Apt Update
+    apt:
+      update-cache: yes
+  
+  - name: Upgrade packages
+    apt:
+      state: latest
+      upgrade: safe
+
+  - name: Apt Clean and Remove
+    apt:
+      autoclean: yes
+      autoremove: yes
